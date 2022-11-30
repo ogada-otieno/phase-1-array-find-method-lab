@@ -68,10 +68,13 @@ const record = [
 function superbowlWin(record) {
     let winYear = record.find(function (win) {
     return win.result === "W"})
-    if (winYear !== undefined) {
+    if (winYear !== undefined) { 
+        // undefined is a keyword
+        // undefined is used as using <--(winYear === defined)--> brings the error. negating undefined, makes defined positive.
+        // essentially (winYear !== undefined) = (winYear === defined)
         return winYear.year
     } else {
-        return winYear
+        return undefined
     }
     
 } superbowlWin(record)
